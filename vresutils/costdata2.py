@@ -42,7 +42,7 @@ def get_full_cost_CO2(ref, CO2cost=0.,
     variable costs 'marginal'.
     Power costs in [Eur/MW/year], Energy costs in [Eur/MWh]'''
     # costs = pd.read_csv('diw2030.csv',index_col=0, comment='#')
-    costs = pd.read_excel(filename, sheetname=ref,
+    costs = pd.read_excel(filename, sheet_name=ref,
                           index_col=0, skiprows=2, header=0)
 
     costs['annualization'] = annualize(rate=discountrate,
